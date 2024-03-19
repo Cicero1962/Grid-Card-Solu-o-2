@@ -31,28 +31,30 @@ body {
 .container {
   display: grid;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   background-color: white;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
   
 }
 
 .sub_container{
   display: grid;
   grid-template-columns: 500px 600px;
-  margin: 0 auto;
-  align-content: center;
-  justify-content: center;
-  align-items: center;
+  padding: 20px;
   gap: 10px;
-  height: 100vh;
+  height: 100%;
+  border: 1px solid red;
+  justify-content: center;
 }
 
 .box{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   gap: 25px;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
   border-radius: 8px;
   justify-content: center;
   align-items: center;
@@ -124,8 +126,7 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 600px;
-  min-width: 280px;
+  width: 100%;
   padding: 0 20px;
 }
 
@@ -207,206 +208,21 @@ body {
 
 @media(max-width:600px){
   .sub_container{
-    display: grid;
-    grid-template-columns: 1fr;
-    height: auto;
-    padding: 20px 10px;
+   display: grid;
+   grid-template-columns: 1fr;
+   width: 100%;
+   height: 100%;
+  }
+  .box
+  {
+    width: 100%;
+   
+  }
+  .box_1{
+    width: 100%;
+  }
+  .container{
+    height: 100%;
   }
 }
 
-/*.box {
-  position: relative;
-  display: flex;
-  width: 550px;
-  flex-direction: column;
-  border-radius: 20px;
-  padding: 20px;
-  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
-  align-items: center;
-  align-content: center;
-  margin: 20px;
-}
-
-.texto_principal {
-  font-family: "Hanken Grotesk";
-  font-weight: 600;
-  font-size: 29px;
-  opacity: 0.3;
-  color: var(--color-White);
-  margin-bottom: 200px;
-  text-align: center;
-  margin-top: 1.25rem;
-}
-
-.number {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  max-width: 150px;
-  height:150px;
-  background-image: linear-gradient(
-    hsla(256, 72%, 46%, 1),
-    hsla(241, 72%, 46%, 0)
-  );
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  border-radius: 50%;
-  padding: 80px;
-  margin-bottom: 50px;
-  top: 40%;
-  transform: translate(0, -50%);
-}
-
-.item_number {
-  color: var(--color-White);
-  font-size: 3rem;
-  font-family: "Hanken Grotesk";
-  font-weight: 800;
-}
-
-.number_two {
-  text-align: center;
-  width: 80px;
-  color: var(--color-White);
-  font-family: "Hanken Grotesk";
-  font-size: 25px;
-  line-height: 1;
-  opacity: 0.3;
-  font-weight: 400;
-  margin-bottom: 20px;
-}
-
-.texto_secundario {
-  font-family: "Hanken Grotesk";
-  color: var(--color-White);
-  font-size: 20px;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.texto_paragrafo {
-  font-family: "Hanken Grotesk";
-  opacity: 0.3;
-  color: var(--color-White);
-  font-size: 1.75rem ;
-  font-weight: 500;
-  margin-bottom: 40px;
-}
-
-.box_1 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 600px;
-  min-width: 280px;
-  padding: 0 20px;
-}
-
-.texto_indice {
-  display: flex;
-  font-family: "Hanken Grotesk";
-  font-size: 20px;
-  font-weight: 600;
-  color: #303b5a;
-  padding: 10px 5px;
-}
-
-.itens_indice {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.card {
-  display: grid;
-  width: 100%;
-  grid-template-columns: auto 1fr auto;
-  justify-content: space-between;
-  padding: 10px;
-  gap: 0 5px;
-  background-color: white;
-  border-radius: 10px;
-  font-weight: 800;
-  font-family: "Hanken Grotesk";
-  font-size: 25px;
-  align-items: center;
-}
-
-.card_reaction {
-  background-color: #ffeeee;
-  color: #ff5757;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-.card_memory {
-  color: #ffb01f;
-  background-color: #fff7e8;
-  margin-bottom: 20px;
-}
-
-.card_verbal {
-  color: #42bd91;
-  background-color: #e5f8f3;
-  margin-bottom: 20px;
-}
-
-.card_visual {
-  color: #1125d4;
-  background-color: #e7e9fa;
-  margin-bottom: 40px;
-}
-
-.btn {
-  padding: 10px;
-  border-radius: 40px;
-  background-color: #303b5a;
-  font-family: "Hanken Grotesk";
-  font-size: 25px;
-  font-weight: 600;
-  color: var(--color-White);
-  cursor: pointer;
-}
-
-.number_span {
-  color: #303b5a;
-}
-.span {
-  color: #303b5a;
-  opacity: 0.4;
-}
-
-.teste{
-  font-size: clamp(1.75em, 1em + 3vw, 1.75em) ;
-}
-/*
-@media(max-width:1200px){
-    .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .box{
-        width: 50%;
-    }
-}
-
- <div class="box">
-                <h2 class="texto_principal">Your Result</h2>
-                <div class="number">
-                    <p class="item_number">
-                        76
-                    </p>
-                    <p class="number_two">of 100</p>
-                </div>
-                <div>
-                    <h2 class="texto_secundario">
-                        Great
-                    </h2>
-                    <p class="texto_paragrafo">
-                        You scored higher than 65% of the<br>people who have taken these tests
-                    </p>
-                </div>
-            </div>
