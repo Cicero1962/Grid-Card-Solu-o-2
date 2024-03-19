@@ -45,7 +45,7 @@ body {
   padding: 20px;
   gap: 10px;
   height: 100%;
-  border: 1px solid red;
+  box-shadow: 0 0 5px rgb(219, 214, 214);
   justify-content: center;
 }
 
